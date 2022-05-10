@@ -2,6 +2,10 @@
 
 IBin is a way to convert text into binary and vice versa.
 
+IBin requires at least C++11 but C++20 is recommended.
+
+**To compile IBin's example premake5 must be installed**. Then run the build.bat if on Windows, run the build.sh if your on Unix systems.
+
 Here is an example of IBin:
 ```cpp
 std::string textToBin = IBin::TextToBin("Hello!");
