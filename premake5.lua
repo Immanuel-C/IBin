@@ -27,7 +27,7 @@ workspace "IWindow"
         location "test"
         kind "ConsoleApp"
         language "C++"
-        cppdialect "C++20"
+        cppdialect "C++11"
 
         includedirs { "src" }
         files { "test/Main.cpp", "src/IBin.cpp" }
