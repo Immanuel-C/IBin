@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# User Defined
+.vscode
+.vs
+*.bin
+bin
+bin-int
+*.make
+Makefile
