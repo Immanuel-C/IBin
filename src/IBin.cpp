@@ -6,8 +6,8 @@
 #include <iostream>
 
 namespace IBin {
-    static const int64_t SIZEOF_WCHAR_BITS = sizeof(wchar_t) * 8;
-    static const int64_t SIZEOF_CHAR_BITS = sizeof(char) * 8;
+    static const size_t SIZEOF_WCHAR_BITS = sizeof(wchar_t) * 8;
+    static const size_t SIZEOF_CHAR_BITS = sizeof(char) * 8;
 
     std::wstring WTextToWBin(const std::wstring& text) noexcept {
         std::wstringstream wss{};
@@ -53,7 +53,6 @@ namespace IBin {
 
     std::wstring WBinFileToWText(const std::string& filename) noexcept {
         std::wifstream ifs{ filename, std::ios::binary };
-        std::wstring bin;
         std::wstring result;
 
         if (!ifs.is_open()) {
@@ -62,16 +61,15 @@ namespace IBin {
         }
 
         // Extract contents from file
-        ifs >> bin;
+        ifs >> result;
 
         // Convert
-        result = WBinToWText(bin);
+        result = WBinToWText(result);
         return result;
     }
 
     std::string BinFileToText(const std::string& filename) noexcept {
         std::ifstream ifs{ filename, std::ios::binary };
-        std::string bin;
         std::string result;
 
         if (!ifs.is_open()) {
@@ -80,10 +78,10 @@ namespace IBin {
         }
 
         // Extract contents from file
-        ifs >> bin;
+        ifs >> result;
 
         // Convert
-        result = BinToText(bin);
+        result = BinToText(result);
 
 
         return result;
