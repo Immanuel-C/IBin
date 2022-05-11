@@ -4,7 +4,7 @@ IBin is a way to convert text into binary and vice versa.
 
 **IBin requires at least C++11** but C++20 is recommended.
 
-**To compile IBin's example premake5 must be installed**. Then run the build.bat if on Windows, run the build.sh if on Unix like systems.
+**To compile IBin's example requires premake5 must be installed**. if premake5 is installed run the build.bat if on Windows, run the build.sh if on Unix like systems.
 
 All functions have documentation. Most code editors like vscode and visual studio should support hovering over the functions and seeing the docs.
 
